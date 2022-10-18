@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+body{
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    width: 350px;
+    height: 250px;
+    background-color:cornflowerblue;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.page{
+    border: 2px solid yellow;
+    height: 100px;
+    width: 200px;
+    /* left: 100px;  */
+    position: absolute;
+    padding: 20px;
+    
+}
+.battery{
+    border: 2px solid yellow;
+    width: 14px;
+    height: 26px;
+    left: 196px;
+    top: 38px;
+    position: absolute;
+}
+.page::before{
+    content: '';
+    background-color: yellow;
+    width: 0;
+    position: absolute;
+    height: 80%;
+    left: 5px;
+    top: 10px;
+    transition:all 3s ; 
+    animation: page 3s infinite;
+    
+}
+.wrapper .page:hover ::before{
+    width: 90%;
+}
+@keyframes page {
+    0%{width: 0;}
+    25%{width: 25%;}
+    50%{width: 50%;}
+    75%{width: 75%;}
+    100%{width: 95%;}
+}
+.dance{
+    position: absolute;
+    width: 130px;
+    height: 50px;
+    bottom: 20px;
+    font-size: 20px;
+    background-color:aquamarine;
+    text-align: center;
+    margin: 10px 20px;
+    padding:8px;
+    border-radius: 10px;
+    animation:dance 0.5s infinite;
+
+}
+@keyframes dance {
+    0%{transform: skewX(5deg);}
+    25%{transform: skewX(-5deg);}
+    50%{transform: skewX(5deg);}
+    75%{transform:skewX(-5deg) ;}
+    100%{transform: skewX(5deg);}
+}
+
