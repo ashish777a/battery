@@ -16,6 +16,7 @@ body{
     height: 250px;
     background-color:cornflowerblue;
     padding: 50px;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
